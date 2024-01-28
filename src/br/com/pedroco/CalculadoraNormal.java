@@ -1,4 +1,4 @@
-package main.java.br.com.pedroco;
+package br.com.pedroco;
 
 public class CalculadoraNormal extends AbstractCalculadora {
    

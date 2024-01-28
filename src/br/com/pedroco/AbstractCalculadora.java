@@ -1,4 +1,4 @@
-package main.java.br.com.pedroco;
+package br.com.pedroco;
 
 /**
  * Classe abstrata que fornece implementações básicas para operações de uma calculadora.
