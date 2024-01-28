@@ -5,7 +5,7 @@
 
     <groupId>br.com.pedroco</groupId>
     <artifactId>calculator-java-study</artifactId>
-    <version>1.0.1</version>
+    <version>1.0.2</version>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -17,7 +17,7 @@
         <dependency>
             <groupId>org.bouncycastle</groupId>
             <artifactId>bcprov-jdk15on</artifactId>
-            <version>1.68</version>
+            <version>[1.68,)</version>
         </dependency>        
     </dependencies>
     
@@ -31,7 +31,27 @@
                     <show>protected</show>
                 </configuration>
             </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-site-plugin</artifactId>
+                <version>3.9.1</version> 
+            </plugin>
         </plugins>
     </build>
+    
+    <reporting>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-javadoc-plugin</artifactId>
+                <version>3.6.3</version>
+                <configuration>
+                    <!-- Configurações adicionais, se necessário -->
+                </configuration>
+            </plugin>
+            <!-- outros plugins de relatório -->
+        </plugins>
+    </reporting>    
 
 </project>

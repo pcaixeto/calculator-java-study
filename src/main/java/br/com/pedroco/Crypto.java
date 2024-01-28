@@ -7,7 +7,7 @@ import java.security.Key;
 import java.security.Security;
 import java.util.Base64;
 
-public class CryptoExemplo {
+public class Crypto {
 
     static {
         Security.addProvider(new BouncyCastleProvider());
@@ -31,21 +31,5 @@ public class CryptoExemplo {
         byte[] decrypted = cipher.doFinal(Base64.getDecoder().decode(input));
 
         return new String(decrypted);
-    }
-
-    public static void main(String[] args) {
-        try {
-            String key = "1234567890123456"; // 16 bytes key
-            String originalString = "Hello, World!";
-            
-            String encryptedString = encrypt(originalString, key);
-            String decryptedString = decrypt(encryptedString, key);
-
-            System.out.println("Original: " + originalString);
-            System.out.println("Encrypted: " + encryptedString);
-            System.out.println("Decrypted: " + decryptedString);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
     }
 }
